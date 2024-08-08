@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  transition: all 0.4s ease;
+}
+
+#clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f0f8ff;
+  padding: 0 20px;
+}
+
+#clock.dark {
+  background: #24292d;
+}
+
+#clock .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  max-width: 560px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 10px #00000033;
+  border-radius: 12px;
+  position: relative;
+}
+
+#clock.dark .container {
+  background: #323840;
+}
+
+#clock .container .icons i {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  height: 30px;
+  width: 30px;
+  background: #24292d;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+#clock.dark .container .icons i {
+  color: #fff;
+  background: #fff;
+}
+
+.container .icons i.fa-sun {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#clock.dark .container .icons i {
+  opacity: 1;
+  pointer-events: auto;
+  font-size: 16px;
+}
+
+#clock .container .time {
+  display: flex;
+  align-items: center;
+}
+
+.container .time .time-colon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.time .time-colon .am_pm {
+  position: absolute;
+  top: 0;
+  right: -58px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1;
+}
+
+#clock.dark .time .time-colon .am_pm {
+  color: #fff;
+}
+
+.time .time-colon .time-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+  width: 100px;
+  background-color: #f0f8ff;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px #00000033;
+}
+
+#clock.dark .time .time-colon .time-text {
+  background: #24292d;
+}
+
+.time .time-colon,
+.time .time-colon .colon {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+#clock.dark .time .time-text .num,
+#clock.dark .time .colon {
+  color: #fff;
+}
+
+.time .time-colon .colon {
+  font-size: 40px;
+  margin: 0 10px;
+}
+
+.time .time-colon .time-text .text {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#clock.dark .time .time-colon .text {
+  color: #fff;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  #clock .container {
+    height: 200px;
+    max-width: 400px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .time .time-colon .time-text {
+    height: 60px;
+    width: 60px;
+  }
+
+  .time .time-colon .time-text .num {
+    font-size: 16px;
+  }
+
+  .time .time-colon .time-text .text {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .time .time-colon .colon {
+    font-size: 16px;
+  }
+
+  .time .time-colon .am_pm {
+    font-size: 20px;
+    right: -40px;
+  }
+
+  #clock .container .icons i {
+    top: 10px;
+    right: 10px;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    font-size: 14px;
+  }
+
+  #clock .container .icons i.fa-sun {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #clock .container .icons i.fa-moon {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
